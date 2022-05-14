@@ -1,10 +1,9 @@
 const errorTypes = require('./error-types')
 
-
 module.exports = {
     [errorTypes.NAME_OR_PASSWORD_IS_REQUIRED]: {
         code: 400,
-        msg: '用户名或密码不能为空'
+        msg: '用户名或密码不能为空!'
     },
 
     [errorTypes.USER_IS_ALREADY_EXIST]: {

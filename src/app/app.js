@@ -18,6 +18,7 @@ app
 router.prefix('/api')
 router.use(userRouter.routes())
 
+// 监听请求的错误事件
 app.on('requestError', errorHandler)
 
 

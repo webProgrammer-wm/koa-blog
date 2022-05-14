@@ -4,6 +4,7 @@ const {
     getUserInfoByName
 } = require('../service/user.service')
 
+// 验证用户
 async function verifyUser(ctx, next) {
     // 1.获取用户名和密码
     const { name, password } = ctx.request.body
@@ -24,11 +25,11 @@ async function verifyUser(ctx, next) {
     await next()
 }
 
+// md5加密密码
 async function md5Passowrd(ctx, next) {
     const { password } = ctx.request.body
-
     ctx.request.body.password = md5(password)
-
+    
     await next()
 }
 
